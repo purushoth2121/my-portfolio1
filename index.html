@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>My-Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
@@ -19,46 +19,33 @@
             <a href="#about">About</a>
             <a href="#skills">Skills & Projects</a>
             <a href="#contact">Contact</a>
-
-            <!--dark mode-->
-            <div class="center-container">
-                <label class="switch">
-                    <input type="checkbox" id="toggledark">
-                    <span class="slider">
-                        <i class="fas fa-sun sun-icon"></i>
-                        <i class="fas fa-moon moon-icon"></i>
-                        <span class="circle"></span>
-
-                    </span>
-                </label>
-            </div>
-
         </nav>
+        <!--dark mode-->
+        <div class="center-container" id="dark-mode">
+            <label class="switch">
+                <input type="checkbox" id="toggledark">
+                <span class="slider">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                    <span class="circle"></span>
 
-        <!-- <nav id="side-nav">
-            <i class="fa-solid fa-bars"></i>
-            <div class="side-nav-link">
-                <nav class="sidenav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills & Projects</a>
-                    <a href="#contact">Contact</a>
-                </nav> -->
-
-    </div>
-
-    </nav>
+                </span>
+            </label>
+        </div>
     </div>
 
     <section class="name-section" id="home" data-aos="fade-down">
+
         <img src="img/photo.png" class="myphoto" />
+
         <h1 class="greeting">Hi,</h1>
         <h1 class="name1">I'm <span class="name">Purushothaman</span></h1>
         <h1 class="role">Frontend Developer</h1>
-        <button class="cont-btn"><a href="#contact">Contact</a></button>
+
+        <button class="cont-btn"><a href="#footer"> Connect </a></button>
+
         <div class="social-contact">
-            <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"
-                    data-aos="fade-zoom"></i></a>
+            <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
         </div>
@@ -70,9 +57,13 @@
         <div class="intro">
             <h2 data-aos="fade-up">About Me</h2>
             <p data-aos="fade-up">
-                Hi, I'm Purushothaman, a Frontend Developer with 2+ years of experience in HTML, CSS, JavaScript, and
-                React Js. I’m passionate about building fast, responsive websites and continuously learning new
-                technologies.
+                Hi, I'm a Frontend Developer with 2+ years of experience building responsive and user-friendly web
+                application.I specialize in<b> HTML, CSS, JavaScript, and
+                React Js</b>, and I enjoy creating clean mordern interface that deliver a great user experience.
+            </p> <br>
+            <p> I have a strong focous on writing on clean and efficient code, improving website performance, and making
+                a sure designs look great on all devices. I'm always learning new technologies to stay up-to-date and
+                improve my skills.
             </p>
         </div>
     </section>
@@ -153,7 +144,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <button class="resume" data-aos="fade-up"><a href="/frontend purushoth.pdf">Download Resume</a></button>
         <div class="social-contact footer">
             <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
@@ -165,10 +156,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
-        var sidenav = document.getElementById("side-nav")
-        function click(event) {
-            sidenav.style.display = "block"
-        }
         const toggle = document.getElementById('toggledark');
         toggle.addEventListener('change', () => {
             document.body.classList.toggle('dark-mode', toggle.checked)

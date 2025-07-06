@@ -41,14 +41,6 @@ body {
     color: blue;
     text-decoration: underline;
 }
-#side-nav{
-    display: none; 
-}
-.side-nav-link{
-    width: 200px;
-    height: 200px;
-}
-
 .name-section {
     text-align: left;
     padding: 50px 30px;
@@ -226,7 +218,19 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+    .nav-bar-links{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .nav-bar{
+        padding: 0;
+       
+    }
+    #dark-mode{
+        display: none;
+    }
     .name-section {
         text-align: center;
     }
@@ -241,11 +245,4 @@ body {
         display: none;
     }
 }
-@media screen and (max-width: 500px){
-    .nav-bar-links{
-        display: none;
-    }
-    #side-nav{
-        display: block;
-    }
-}
+    
