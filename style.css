@@ -50,7 +50,26 @@ body {
 .name-section h1 {
     margin: 20px 0 0 0;
 }
+.fade-in{
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    left: -100px;
+    top: 50px;
+    font-size: 2rem;
+    white-space: nowrap;
+    animation: fadein 10s linear infinite alternate;
+}
 
+@keyframes fadein{
+    from{
+        left: 90%;
+    }
+    to{
+        left: calc(100%-200px);
+        color: red;
+    }
+}
 .myphoto {
     float: right;
     padding: 4px;
@@ -75,6 +94,10 @@ body {
     border: none;
     border-radius: 12px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.cont-btn:hover{
+    transform: scale(1.3);
 }
 
 .cont-btn a {
@@ -160,11 +183,18 @@ body {
 }
 
 .projects-list {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
     margin-top: 30px;
 }
 .project{
+    border: 2px solid blue;
+    border-radius: 10px;
     max-width: 600px;
     padding: 20px;
+    box-shadow: 0 0 10px darkblue;
+
 }
 
 .contact-me {
