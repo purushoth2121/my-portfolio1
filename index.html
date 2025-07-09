@@ -17,12 +17,13 @@
         <nav class="nav-bar-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Skills & Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">project</a>
             <a href="#contact">Contact</a>
         </nav>
-
-        <!--dark mode-->
-        <div class="center-container" id="dark-mode">
+    </div>
+    <!--dark mode-->
+    <!-- <div class="center-container" id="dark-mode">
             <label class="switch">
                 <input type="checkbox" id="toggledark">
                 <span class="slider">
@@ -32,20 +33,23 @@
 
                 </span>
             </label>
-        </div>
-        <h1 style="text-align: center;" class="fade-in">Welcome</h1>
-
+        </div> -->
+    <div class="fadein">
+        <h1>Welcome</h1>
     </div>
-
-    <section class="name-section" id="home" data-aos="fade-down">
+    <section class="name-section" id="home">
 
         <img src="img/photo.png" class="myphoto" />
 
         <h1 class="greeting">Hi,</h1>
         <h1 class="name1">I'm <span class="name">Purushothaman</span></h1>
-        <h1 class="role">Frontend Developer</h1>
 
-        <button class="cont-btn"><a href="#footer"> Connect </a></button>
+        <p style="padding: 10px 0 0 0;">Passionate Frontend Developer |<br>
+            Building responsive web Applications</p>
+
+        <button class="cont-btn"><a href="/frontend purushoth.pdf">Download Resume <i
+                    class="fa-solid fa-download"></i></a></button>
+        <button class="cont-btn"><a href="#footer"> Contact With Me </a></button>
 
         <div class="social-contact">
             <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
@@ -53,7 +57,6 @@
             <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
         </div>
     </section>
-
 
     <section class="about-section" id="about">
         <h1 data-aos="fade-up">About</h1>
@@ -64,7 +67,7 @@
                 application.I specialize in<b> HTML, CSS, JavaScript, and
                     React Js</b>, and I enjoy creating clean mordern interface that deliver a great user experience.
             </p> <br>
-            <p> I have a strong focous on writing on clean and efficient code, improving website performance, and making
+            <p data-aos="fade-up"> I have a strong focous on writing on clean and efficient code, improving website performance, and making
                 a sure designs look great on all devices. I'm always learning new technologies to stay up-to-date and
                 improve my skills.
             </p>
@@ -72,47 +75,50 @@
     </section>
 
     <section class="skills-section" id="skills">
-        <h1 data-aos="fade-up">Skills & Projects</h1>
+        <h1 data-aos="fade-up">Skills</h1>
 
         <h2 class="skill-title" data-aos="fade-up">Technical Skills</h2>
         <div class="skill-grid" data-aos="fade-up">
-            <div class="myskill">
+
+            <h3>Languages</h3>
+            <div class="myskill" data-aos="fade-up">
                 <img src="img/html img.png" alt="HTML" />
                 <h4>HTML</h4>
-            </div>
-            <div class="myskill">
                 <img src="img/css img.png" alt="CSS" />
                 <h4>CSS</h4>
-            </div>
-            <div class="myskill">
-                <img src="img/responsive img.png" alt="Responsive Design" />
-                <h4>Responsive Design</h4>
-            </div>
-            <div class="myskill">
-                <img src="img/boots img.png" alt="Bootstrap" />
-                <h4>Bootstrap</h4>
-            </div>
-            <div class="myskill">
                 <img src="img/js img 2.png" alt="JavaScript" />
                 <h4>JavaScript</h4>
             </div>
-            <div class="myskill">
+
+            <h3 data-aos="fade-right">Librarries & Framework</h3>
+            <div class="myskill" data-aos="fade-up">
+                <img src="img/raect img2.png" alt="React JS" />
+                <h4>React.js</h4>
+                <img src="img/boots img.png" alt="Bootstrap" />
+                <h4>Bootstrap</h4>
                 <img src="img/jquery img.png" alt="jQuery" />
                 <h4>jQuery</h4>
             </div>
-            <div class="myskill">
-                <img src="img/raect img2.png" alt="React JS" />
-                <h4>React.js</h4>
+
+            <h3 data-aos="fade-right">UI/UX Design Skills</h3>
+            <div class="myskill" data-aos="fade-up">
+                <img src="img/responsive img.png" alt="Responsive Design" />
+                <h4>Responsive Design</h4>
             </div>
-            <div class="myskill">
+
+            <h3 data-aos="fade-right">Version Control</h3>
+            <div class="myskill" data-aos="fade-up">
                 <img src="img/git img.png" alt="Git and GitHub" />
                 <h4>Git & GitHub</h4>
             </div>
         </div>
+    </section>
+
+    <section class="project-section" id="project">
 
         <h2 data-aos="fade-up" style="text-align: center;">Projects</h2>
         <div class="projects-list" data-aos="fade-up">
-            <div class="project">
+            <div class="project" >
                 <h3>To-Do App</h3>
                 <p>A simple task management application developed using HTML, CSS, and JavaScript to help users manage
                     daily tasks efficiently.</p>
@@ -140,29 +146,43 @@
             </div>
         </div>
     </section>
-    <hr />
 
     <section class="contact-section" id="contact">
         <h1 data-aos="fade-up">Contact</h1>
-        <div class="contact-me">
-            <form>
-                <input type="text" name="name" placeholder="Your Name" required data-aos="fade-up" /><br /><br />
-                <input type="email" name="email" placeholder="Your Email" required data-aos="fade-up" /><br /><br />
-                <textarea name="message" placeholder="Your Message" rows="6" data-aos="fade-up"></textarea><br /><br />
-                <button class="send-btn" type="submit" data-aos="fade-up">Send Message</button>
-            </form>
+        <div class="contact-details" data-aos="fade-up" >
+            <div class="contact-me">
+                <a href="https://github.com/purushoth2121">
+                    <img src="/my-portfolio1/img/github1.jpg" alt="github">
+                    <p>Git hub</p>
+                </a>
+            </div>
+            <div class="contact-me">
+                <a href="https://www.linkedin.com/in/purushoth2121/">
+                    <img src="/my-portfolio1/img/linkedin.webp" alt="linkedin">
+                    <p>Linkedin</p>
+                </a>
+            </div>
+            <div class="contact-me">
+                <a href="mailto:purushothncr2002@gmail.com">
+                    <img src="/my-portfolio1/img/gmail1.jpg" alt="gmail">
+                    <p>Gmail</p>
+                </a>
+            </div>
+            <div class="contact-me">
+                <a href="tel:+919361137694">
+                    <img src="/my-portfolio1/img/phone2.jpg" alt="Phone">
+                    <p>Phone</p>
+                </a>
+            </div>
         </div>
     </section>
 
     <footer class="footer" id="footer">
-        <button class="resume" data-aos="fade-up"><a href="/frontend purushoth.pdf">Download Resume</a></button>
-        <div class="social-contact footer">
-            <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
-        </div>
         <p>All rights reserved © Purushothaman 2025</p>
+        <p>Developed with Passion</p>
     </footer>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
