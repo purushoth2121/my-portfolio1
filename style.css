@@ -46,9 +46,9 @@ body {
     padding: 10px;
     position: relative;
     position: absolute;
-    left: -50px;
-    right: -20px;
-    top: 30px;
+    left: 0px;
+    right: 0px;
+    top: 25px;
     font-size: 1rem;
     white-space: nowrap;
     animation: fade 5s linear infinite alternate;
@@ -56,12 +56,12 @@ body {
 
 @keyframes fade {
     from {
-        left: 90%;
+        right: 100%;
         color: blue;
     }
 
     to {
-        right: 90%;
+        left: 90%;
         color: red;
     }
 }
@@ -182,7 +182,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 50%;
-    gap: 10px;
+    gap: 20px;
     margin: 10px;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -190,7 +190,7 @@ body {
 
 .myskill:hover {
     transform: translateY(10px);
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px #ffcf70;
 }
 
 .skill-grid img {
@@ -280,6 +280,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 0;
+        font-size: 12px;
     }
 
     .nav-bar {
@@ -287,16 +288,17 @@ body {
         height: 90px;
     }
     .fadein{
-        top: 50px;
+        top: 45px;
     }
 
     .name-section {
-        margin-top: 0;
+        margin: 0;
         text-align: center;
         font-size: 1rem;
     }
 
     .myphoto {
+        text-align: center;
         float: none;
         display: block;
         margin: 20px auto;
