@@ -42,6 +42,7 @@ body {
 }
 
 .fadein {
+    color: blue;
     z-index: 222;
     padding: 10px;
     position: relative;
@@ -51,18 +52,21 @@ body {
     top: 25px;
     font-size: 1rem;
     white-space: nowrap;
-    animation: fade 5s linear infinite alternate;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
 }
 
-@keyframes fade {
-    from {
-        right: 100%;
-        color: blue;
+@keyframes move {
+    0% {
+        transform: translateX(0px);
+        
     }
-
-    to {
-        left: 90%;
-        color: red;
+    100% {
+        transform: translateX(100%);
+        
     }
 }
 
