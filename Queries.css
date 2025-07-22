@@ -1,0 +1,57 @@
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .nav-bar-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        padding: 0;
+        height: 90px;
+    }
+
+    .fadein {
+        top: 45px;
+        /* animation: move 5s forwards;
+
+        @keyframes move {
+            0% {
+                transform: translateY(0px);
+
+            }
+
+            100% {
+                transform: translateY(100%);
+
+            }
+        } */
+    }
+
+    .name-section {
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .myphoto {
+        text-align: center;
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .myskill {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .skill-grid img {
+        display: none;
+    }
+
+    .project img {
+        height: 90px;
+        width: auto;
+    }
+}
