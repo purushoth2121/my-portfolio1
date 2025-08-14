@@ -187,7 +187,7 @@ body {
     background: rgba(250, 204, 21, 0.15);
     transform: translateY(-5px) scale(1.05);
 }
-.skill-text{
+.skills-text{
     display: none;
 }
 /* === ABOUT SECTION === */
