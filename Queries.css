@@ -1,57 +1,90 @@
-@media screen and (max-width: 600px) and (min-width: 300px) {
-    .nav-bar-links {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        font-size: 12px;
-    }
+/* === MOBILE RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
 
-    .nav-bar {
-        padding: 0;
-        height: 90px;
-    }
-
-    .fadein {
-        top: 45px;
-        /* animation: move 5s forwards;
-
-        @keyframes move {
-            0% {
-                transform: translateY(0px);
-
-            }
-
-            100% {
-                transform: translateY(100%);
-
-            }
-        } */
-    }
-
+    /* Name Section */
     .name-section {
-        margin: 0;
+        padding: 50px 15px;
         text-align: center;
+    }
+
+    .name-section h1 {
+        font-size: 2rem;
+    }
+
+    .name-section p {
         font-size: 1rem;
     }
 
-    .myphoto {
-        text-align: center;
-        float: none;
-        display: block;
-        margin: 20px auto;
+    /* Skills Section */
+    .skills-section {
+        padding: 40px 15px;
+    }
+
+    .skills-section h1 {
+        font-size: 1.8rem;
     }
 
     .myskill {
-        width: 90%;
-        flex-direction: column;
+        display: flex;   
+        padding: 15px;
     }
 
-    .skill-grid img {
+    .myskill img {
+        width: 60px;
+        height: 60px;
+    }
+    .skills-text{
+        display:none ;
+    }
+
+    /* Flight Booking Project Card */
+    .project-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .project-card img {
+        height: 150px;
+    }
+
+    /* General Text */
+    body {
+        font-size: 0.9rem;
+    }
+
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width:420px){
+    .name-section img{
+        align-items: center;
         display: none;
     }
+    .skills-text{
+        gap: 10px;
+        text-align: left;
+        padding: 10px;
+        display: block;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .skills-text li{
 
-    .project img {
-        height: 90px;
-        width: auto;
+        padding: 10px;
+        border: 2px solid darkblue;
+        border-radius:10px ;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .myskill img{
+        display: none;
     }
 }
