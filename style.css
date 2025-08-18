@@ -51,6 +51,7 @@ body {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -62,6 +63,7 @@ body {
         transform: translateX(100px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -187,9 +189,11 @@ body {
     background: rgba(250, 204, 21, 0.15);
     transform: translateY(-5px) scale(1.05);
 }
-.skills-text{
+
+.skills-text {
     display: none;
 }
+
 /* === ABOUT SECTION === */
 .about-section {
     margin: 50px auto;
@@ -251,6 +255,11 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.project>h3 {
+    color: rgb(110, 110, 212);
+    font-weight: bold;
+}
+
 .project img {
     width: 100%;
     height: 180px;
@@ -292,6 +301,11 @@ body {
     text-align: center;
 }
 
+.contact-me img:hover {
+    transform:scale(1.02);
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
+}
+
 .contact-me img {
     width: 80px;
     height: 80px;
@@ -313,6 +327,3 @@ body {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
 }
-
-
-

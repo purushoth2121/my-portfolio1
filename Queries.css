@@ -25,7 +25,7 @@
     }
 
     .myskill {
-        display: flex;   
+        display: flex;
         padding: 15px;
     }
 
@@ -33,8 +33,9 @@
         width: 60px;
         height: 60px;
     }
-    .skills-text{
-        display:none ;
+
+    .skills-text {
+        display: none;
     }
 
     /* Flight Booking Project Card */
@@ -60,12 +61,18 @@
         gap: 10px;
     }
 }
-@media (max-width:520px){
-    .name-section img{
+
+@media (max-width:520px) {
+    .name-section img {
         align-items: center;
         display: none;
     }
-    .skills-text{
+
+    .about-para2 {
+        display: none;
+    }
+
+    .skills-text {
         gap: 10px;
         text-align: left;
         padding: 10px;
@@ -75,16 +82,51 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    .skills-text li{
+
+    .skills-text li {
 
         padding: 10px;
         border: 2px solid darkblue;
-        border-radius:10px ;
+        border-radius: 10px;
         display: flex;
         justify-content: center;
         gap: 10px;
     }
-    .myskill img{
+
+    .skills-text li:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
+    }
+
+    .myskill img {
         display: none;
+    }
+
+    .project img {
+        border: 0;
+        width: 80%;
+        height: 140px;
+        object-fit: fill;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .contact-section {
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+        background: #1e293b;
+        color: #eab308;
+        border-radius: 15px;
+        max-width: 1000px;
+    }
+
+    .contact-me img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        object-fit: cover;
+        border: 3px solid #facc15;
     }
 }
