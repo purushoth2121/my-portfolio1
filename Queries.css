@@ -1,132 +1,101 @@
-/* === MOBILE RESPONSIVE DESIGN === */
-@media (max-width: 768px) {
+@media (max-width: 520px) {
+    /* Navbar */
 
-    /* Name Section */
-    .name-section {
-        padding: 50px 15px;
+    nav ul {
+        gap: 2px;
+    }
+
+    /* Hero skills icons */
+    #hero.skill-img {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .hide-profile {
+        display: block;
         text-align: center;
     }
 
-    .name-section h1 {
-        font-size: 2rem;
+    #hero.skill-img img {
+        width: 50px;
+        height: auto;
+        border-radius: 12px;
     }
 
-    .name-section p {
-        font-size: 1rem;
+    /* About section */
+    #about-profile {
+        margin: 15px;
+        padding: 20px;
     }
 
-    /* Skills Section */
-    .skills-section {
-        padding: 40px 15px;
+    .myphoto {
+        width: 180px;
+        height: 180px;
     }
 
-    .skills-section h1 {
-        font-size: 1.8rem;
+    .name1 {
+        font-size: 1.6rem;
     }
 
-    .myskill {
-        display: flex;
-        padding: 15px;
+    .about p {
+        font-size: 0.95rem;
     }
 
-    .myskill img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .skills-text {
-        display: none;
-    }
-
-    /* Flight Booking Project Card */
-    .project-card {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px;
-        margin: 0 auto;
-    }
-
-    .project-card img {
-        height: 150px;
-    }
-
-    /* General Text */
-    body {
-        font-size: 0.9rem;
-    }
-
-    /* Navigation */
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (max-width:520px) {
-    .name-section img {
-        align-items: center;
-        display: none;
-    }
-
-    .about-para2 {
-        display: none;
+    /* Skills & Projects */
+    #skills-Project {
+        margin: 15px;
+        padding: 20px;
     }
 
     .skills-text {
-        gap: 10px;
-        text-align: left;
-        padding: 10px;
+        gap: 20px;
+    }
+
+    .my-skill {
+        min-height: 50px;
         display: block;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        padding: 15px;
+        margin: 5px 0;
     }
 
-    .skills-text li {
-
-        padding: 10px;
-        border: 2px solid darkblue;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .skills-text li:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
-    }
-
-    .myskill img {
-        display: none;
+    /* Projects */
+    .project-section {
+        padding: 20px;
+        grid-template-columns: 1fr;
+        /* single column */
+        gap: 15px;
     }
 
     .project img {
-        border: 0;
-        width: 80%;
-        height: 140px;
-        object-fit: fill;
-        border-radius: 8px;
-        margin-bottom: 10px;
+        height: 150px;
     }
 
+    .project h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Contact */
     .contact-section {
-        margin: 20px auto;
-        padding: 20px;
-        text-align: center;
-        background: #1e293b;
-        color: #eab308;
-        border-radius: 15px;
-        max-width: 1000px;
+        margin: 15px;
+        padding: 25px;
     }
 
     .contact-me img {
         width: 60px;
         height: 60px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        object-fit: cover;
-        border: 3px solid #facc15;
+    }
+
+    .contact-me p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
     }
 }

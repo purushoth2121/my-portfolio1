@@ -4,155 +4,205 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My-Portfolio</title>
+    <title>Portfolio</title>
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="Queries.css" />
+
+    <!-- External Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <div class="nav-bar">
-        <p>Purushothaman</p>
-        <nav class="nav-bar-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#project">project</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <h1>Frontend</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- name section -->
-
-    <section class="name-section" id="home">
-
-        <img src="img/photo.png" class="myphoto" />
-
-        <h1 class="greeting">Hi,</h1>
-        <h1 class="name1">I'm <span class="name">Purushothaman</span></h1>
-
-        <p style="padding: 10px 0 0 0;">Passionate Frontend Developer |<br>
-            Building responsive web Applications</p>
-
-        <button class="cont-btn"><a href="./img/Frontend.pdf">Download Resume <i
-                    class="fa-solid fa-download"></i></a></button>
-        <button class="cont-btn"><a href="#footer"> Contact With Me </a></button>
-
-        <div class="social-contact">
-            <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
-        </div>
+    <!-- Hero Section (Skills Images) -->
+    <section id="hero" class="skill-img">
+        <img src="img/html img.png" alt="HTML" />
+        <img src="img/css img.png" alt="CSS" />
+        <img src="img/tailwind1.png" alt="Tailwind CSS" />
+        <img src="img/js img 2.png" alt="JavaScript" />
+        <img src="img/jquery img.png" alt="jQuery" />
+        <img src="img/tsc1.png" alt="TypeScript" />
+        <img src="img/raect img2.png" alt="React.js" />
+        <img src="img/node.png" alt="Node.js" />
+        <img src="img/responsive img.png" alt="Responsive Design" />
+        <img src="img/git img.png" alt="Git and GitHub" />
     </section>
-    <!-- about section -->
-    <section class="about-section" id="about">
-        <h1 data-aos="fade-up">About</h1>
-        <div class="intro">
-            <h2>About Me</h2>
-            <p>
-                Hi, I'm a Passionate Frontend Developer building responsive and user-friendly web
-                application.I specialize in<b style="color: yellow"> HTML, CSS, JavaScript, jQuery, Typescript and
-                    React Js</b>, and I enjoy creating clean mordern interface that deliver a great user experience.
-            </p> <br>
-            <p class="about-para2"> I have a strong focous on writing on clean and efficient code, improving website
-                performance, and making
-                a sure designs look great on all devices. I'm always learning new technologies to<b
-                    style="color: white;"> stay up-to-date and
-                    improve my skills.</b>
-            </p>
-        </div>
-    </section>
-    <!-- skills section -->.
 
-    <section class="skills-section" id="skills">
-        <h1 data-aos="fade-up">Skills</h1>
-        <div class="myskill" data-aos="fade-up">
-            <img src="img/html img.png" alt="HTML" />
-            <img src="img/css img.png" alt="CSS" />
-            <img src="img/tailwind1.png" alt="tailwind" />
-            <img src="img/js img 2.png" alt="JavaScript" />
-            <img src="img/jquery img.png" alt="jQuery" />
-            <img src="./img/tsc1.png" alt="Typescript">
-            <img src="img/raect img2.png" alt="React JS" />
-            <img src="img/responsive img.png" alt="Responsive Design" />
-            <img src="img/git img.png" alt="Git and GitHub" />
-            <ul class="skills-text">
-                <li>HTMl5</li>
-                <li>CSS</li>
-                <li>Tailwind</li>
-                <li>JavaScript(ES6)</li>
-                <li>jQuery</li>
-                <li>Typescript</li>
-                <li>React</li>
-                <li>Router, Redux, API Context</li>
-                <li>Git - GitHub</li>
-            </ul>
+    <!-- Profile & Skills -->
+    <section id="about-profile" class="grid two-col">
+        <!-- About Section -->
+        <div class="card about">
+            <div class="hide-about">
+                <h2>About Me</h2>
+                <p>
+                    I started my career in QA and QC. Later, I transitioned into
+                    <b>Frontend Development</b>, where I learned <b>HTML, CSS, JavaScript, jQuery, TypeScript,</b> ,
+                    <b>React.js</b> and <b>Node.js</b>, building responsive and user-friendly web applications.
+                </p>
+                <p>
+                    My goal is to grow beyond a <b>Full Stack Developer</b> — building scalable applications, exploring
+                    <b>cloud technologies</b>, and contributing to innovative solutions that create real impact.
+                </p>
+            </div>
+            <button class="cont-btn">
+                <a href="./Img/Frontend.pdf">Download Resume <i class="fa-solid fa-download"></i></a>
+            </button>
+            <button class="cont-btn"><a href="#footer">Contact With Me</a></button>
+            <div class="social-contact">
+                <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
-        </div>
-    </section>
-    <!-- project secton -->
-    <section class="project-section" id="project">
+        <!-- profile -->
+        <div class="card profile">
+            <img src="img/photo.png" alt="Profile photo" class="myphoto" />
 
-        <h2 data-aos="fade-up" style="text-align: center;">Projects</h2>
-        <div class="projects-list" data-aos="fade-up">
-            <div class="project">
-                <img src="./img/flight2.webp">
-                <h3>Flight Booking</h3>
-                <p>A React-based flight ticket booking application with a user-friendly interface, date selection, and
-                    booking confirmation system.</p>
-                <button class="cont-btn"><a href="https://purushoth2121.github.io/Flight-Booking-App/"
-                        target="_blank">View
-                        Project</a></button>
-            </div>
+            <h1 class="name1">I'm <span class="name">Purushothaman</span></h1>
+            <p>Passionate Frontend Developer |<br>
+                Building responsive web Applications</p>
 
-            <div class="project">
-                <img src="./img/ecom1.jpg" alt="Fashnova">
-                <h3>Fashnova</h3>
-                <p>A fully responsive online shopping platform featuring product filtering, detailed product pages, and
-                    an invative user interface.</p>
-                <button class="cont-btn"><a href="https://purushoth2121.github.io/E-Commerce/" target="_blank">View
-                        Project</a></button>
-            </div>
-            <div class="project">
-                <img src="./img/shpoi1.jpeg" alt="Shopify">
-                <h3>Shopify</h3>
-                <p>Shopify-based e-commerce site with dynamic price updates, smooth add-to-cart functionality, animated
-                    interactions, and a responsive cart system</p>
-                <button class="cont-btn"><a href="https://purushoth2121.github.io/Shopify/" target="_blank">View
-                        Project</a></button>
-            </div>
-            <div class="project">
-                <img src="./img/Airbnb.jpeg" alt="Airbnb">
-                <h3>Airbnb</h3>
-                <p>A responsive Airbnb-inspired web application built with React + Vite. It replicates Airbnb’s design
-                    and functionality with a custom search interface, listings, and booking experience</p>
-                <button class="cont-btn"><a href="https://purushoth2121.github.io/Clone-Airbnb/" target="_blank">View
-                        Project</a></button>
-            </div>
-            <div class="project">
-                <img src="./img/todo.jpeg" alt="todo">
-                <h3>To-Do App</h3>
-                <p>A simple task management application developed using jQuery to help users manage
-                    daily tasks efficiently.</p>
-                <button class="cont-btn"><a href="https://purushoth2121.github.io/Task-manager/" target="_blank">View
-                        Project</a></button>
+            <div class="hide-profile">
+                 
+                <button class="cont-btn">
+                    <a href="./Img/Frontend.pdf">Download Resume <i class="fa-solid fa-download"></i></a>
+                </button>
+                <button class="cont-btn"><a href="#footer">Contact With Me</a></button>
+                <div class="social-contact">
+                    <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <hr>
+                <h2 style="margin-bottom: 20px;">About Me</h2>
+                <p>
+                    I started my career in QA and QC. Later, I transitioned into
+                    <b>Frontend Development</b>, where I learned <b>HTML, CSS, JavaScript, jQuery, TypeScript,</b> ,
+                    <b>React.js</b> and <b>Node.js</b>, building responsive and user-friendly web applications.
+                </p>
             </div>
         </div>
     </section>
-    <!-- contact section -->
+    <!-- skills and project section -->
+    <section id="skills-Project">
+        <div class="toggle-buttons">
+            <button id="skillsBtn" class="active">Skills</button>
+            <button id="projectsBtn">Projects</button>
+        </div>
+
+        <div class="content">
+            <!-- Skills Section -->
+            <div id="skillsSection" class="section active">
+                <div class="skills-text">
+                    <div class="my-skill">
+                        <h3>Frontend</h3>
+                        <p>HTML5</p>
+                        <p>CSS3</p>
+                        <p>JavaScript (ES6+)</p>
+                        <p>jQuery</p>
+                    </div>
+
+                    <div class="my-skill">
+                        <h3>Frameworks &<br> Libraries</h3>
+
+                        <p>TypeScript</p>
+                        <p>React.js</p>
+                        <p>Router, Redux, <br>API context</p>
+                    </div>
+                    <div class="my-skill">
+                        <h3>Backend</h3>
+                        <p>Node.js</p>
+                        <p>Express.js (basic)</p>
+                    </div>
+
+                    <div class="my-skill">
+                        <h3>Version Control</h3>
+                        <p>Git & GitHub</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div id="projectsSection" class="section">
+                <h2>My Projects</h2>
+                <div class="project-section">
+                    <div class="project">
+                        <img src="./img/flight2.webp">
+                        <h3>Flight Booking</h3>
+                        <p>A React-based flight ticket booking application with date
+                            selection,booking and confirmation system.</p>
+                        <button class="cont-btn"><a href="https://purushoth2121.github.io/Flight-Booking-App/"
+                                target="_blank">View
+                                Project</a></button>
+                    </div>
+
+                    <div class="project">
+                        <img src="./img/ecom1.jpg" alt="Fashnova">
+                        <h3>Fashnova</h3>
+                        <p>A fully responsive online shopping platform featuring like product filtering and detailed
+                            product pages</p>
+                        <button class="cont-btn"><a href="https://purushoth2121.github.io/E-Commerce/"
+                                target="_blank">View
+                                Project</a></button>
+                    </div>
+                    <div class="project">
+                        <img src="./img/shpoi1.jpeg" alt="Shopify">
+                        <h3>Shopify</h3>
+                        <p>E-commerce site with dynamic price updates, smooth add-to-cart functionality and a responsive
+                            cart system</p>
+                        <button class="cont-btn"><a href="https://purushoth2121.github.io/Shopify/" target="_blank">View
+                                Project</a></button>
+                    </div>
+                    <div class="project">
+                        <img src="./img/Airbnb.jpeg" alt="Airbnb">
+                        <h3>Airbnb</h3>
+                        <p>An Airbnb-inspired web application built with React + Vite. It replicates Airbnb’s
+                            functionality with a custom search interface, listings, and booking experience</p>
+                        <button class="cont-btn"><a href="https://purushoth2121.github.io/Clone-Airbnb/"
+                                target="_blank">View
+                                Project</a></button>
+                    </div>
+                    <div class="project">
+                        <img src="./img/todo.jpeg" alt="todo">
+                        <h3>To-Do App</h3>
+                        <p>A simple task management application developed using jQuery to help users manage
+                            daily tasks efficiently.</p>
+                        <button class="cont-btn"><a href="https://purushoth2121.github.io/Task-manager/"
+                                target="_blank">View
+                                Project</a></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact section -->
     <section class="contact-section" id="contact">
-        <h1 data-aos="fade-up">Contact</h1>
-        <div class="contact-details" data-aos="fade-up">
+        <h1>Contact</h1>
+        <div class="contact-details">
             <div class="contact-me">
                 <a href="https://github.com/purushoth2121">
-                    <img src="./img/github1.jpg" alt="github">
+                    <img src="./Img/git img.png" alt="github">
                 </a>
             </div>
             <div class="contact-me">
@@ -172,17 +222,17 @@
             </div>
         </div>
     </section>
-
-    <footer class="footer" id="footer">
-        <p>All rights reserved © Purushothaman 2025</p>
-        <p>Developed with Passion</p>
+    <!-- Footer -->
+    <footer id="footer">
+        <p>© 2025 Purushothaman | Frontend Developer</p>
+        <div class="social-contact">
+            <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
+        </div>
     </footer>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

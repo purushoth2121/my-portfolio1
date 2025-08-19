@@ -1,54 +1,26 @@
-const form = document.getElementById('todo-form');
-const input = document.getElementById('todo-input');
-const list = document.getElementById('todo-list');
+const skillsBtn = document.getElementById("skillsBtn");
+const projectsBtn = document.getElementById("projectsBtn");
+const skillsSection = document.getElementById("skillsSection");
+const projectsSection = document.getElementById("projectsSection");
 
-// Load tasks from localStorage
-window.onload = () => {
-  const saved = JSON.parse(localStorage.getItem("todos")) || [];
-  saved.forEach(todo => addTodo(todo.text, todo.completed));
-};
+skillsBtn.addEventListener("click", () => {
+  skillsSection.classList.add("active");
+  projectsSection.classList.remove("active");
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const task = input.value.trim();
-  if (task) {
-    addTodo(task);
-    saveTodo(task, false);
-    input.value = '';
-  }
+  skillsBtn.classList.add("active");
+  projectsBtn.classList.remove("active");
+
+  // restart animation when user leaves projects
+  projectsBtn.classList.remove("stop-animation");
 });
 
-function addTodo(task, completed = false) {
-  const li = document.createElement('li');
-  li.textContent = task;
-  if (completed) li.classList.add("completed");
+projectsBtn.addEventListener("click", () => {
+  projectsSection.classList.add("active");
+  skillsSection.classList.remove("active");
 
-  li.addEventListener('click', () => {
-    li.classList.toggle('completed');
-    updateStorage();
-  });
+  projectsBtn.classList.add("active");
+  skillsBtn.classList.remove("active");
 
-  const delBtn = document.createElement('button');
-  delBtn.textContent = 'Delete';
-  delBtn.onclick = function () {
-    li.remove();
-    updateStorage();
-  };
-
-  li.appendChild(delBtn);
-  list.appendChild(li);
-}
-
-function saveTodo(text, completed) {
-  const todos = JSON.parse(localStorage.getItem("todos")) || [];
-  todos.push({ text, completed });
-  localStorage.setItem("todos", JSON.stringify(todos));
-}
-
-function updateStorage() {
-  const todos = [];
-  document.querySelectorAll("#todo-list li").forEach(li => {
-    todos.push({ text: li.firstChild.textContent, completed: li.classList.contains("completed") });
-  });
-  localStorage.setItem("todos", JSON.stringify(todos));
-}
+  // stop animation once clicked
+  projectsBtn.classList.add("stop-animation");
+});
