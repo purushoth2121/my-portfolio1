@@ -1,24 +1,19 @@
 @media (max-width: 520px) {
-    /* Navbar */
-
     nav ul {
         gap: 2px;
     }
 
     /* Hero skills icons */
-    #hero.skill-img {
-        gap: 10px;
+    .skill-img{
+        margin: 0;
         padding: 10px;
     }
-
-    .about {
-        display: none;
+    .skill-img img {
+        width: 10px;
+        margin: 0;
+        padding: 0;
     }
 
-    .hide-profile {
-        display: block;
-        text-align: center;
-    }
 
     #hero.skill-img img {
         width: 50px;
@@ -28,6 +23,7 @@
 
     /* About section */
     #about-profile {
+
         margin: 15px;
         padding: 20px;
     }
@@ -40,7 +36,10 @@
     .name1 {
         font-size: 1.6rem;
     }
-
+    .about-para2{
+        display: none;
+        padding-bottom: 10px;
+    }
     .about p {
         font-size: 0.95rem;
     }
@@ -53,6 +52,7 @@
 
     .skills-text {
         gap: 20px;
+        flex-wrap: wrap;
     }
 
     .my-skill {
@@ -69,9 +69,12 @@
         /* single column */
         gap: 15px;
     }
+    .project-section p{
+        display: none;
+    }
 
     .project img {
-        height: 150px;
+        height: 120px;
     }
 
     .project h3 {
@@ -85,8 +88,8 @@
     }
 
     .contact-me img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
 
     .contact-me p {

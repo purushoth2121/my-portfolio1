@@ -1,3 +1,27 @@
+const rainBg = document.querySelector(".rain-bg");
+for (let i = 0; i < 30; i++) {
+  const drop = document.createElement("div");
+  drop.classList.add("drop");
+  drop.style.left = `${Math.random() * 100}%`;
+  drop.style.animationDuration = `${Math.random() * 2 + 2}s`;
+  drop.style.animationDelay = `${Math.random() * 5}s`;
+  rainBg.appendChild(drop);
+}
+
+
+
+  window.addEventListener("load", () => {
+    const images = document.querySelectorAll(".skill-img img");
+    
+    images.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add("animate");
+      }, index * 800); // delay each by 0.8s
+    });
+  });
+
+
+
 const skillsBtn = document.getElementById("skillsBtn");
 const projectsBtn = document.getElementById("projectsBtn");
 const skillsSection = document.getElementById("skillsSection");
@@ -24,3 +48,18 @@ projectsBtn.addEventListener("click", () => {
   // stop animation once clicked
   projectsBtn.classList.add("stop-animation");
 });
+
+function revealOnScroll() {
+  const sections = document.querySelectorAll("section");
+  const triggerBottom = window.innerHeight * 0.85;
+  sections.forEach((sec) => {
+    const boxTop = sec.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      sec.classList.add("reveal");
+    } else {
+      sec.classList.remove("reveal");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
