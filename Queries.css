@@ -1,13 +1,17 @@
 @media (max-width: 520px) {
+    .role{
+        display: none;
+    }
     nav ul {
         gap: 2px;
     }
 
     /* Hero skills icons */
-    .skill-img{
+    .skill-img {
         margin: 0;
         padding: 10px;
     }
+
     .skill-img img {
         width: 10px;
         margin: 0;
@@ -36,12 +40,14 @@
     .name1 {
         font-size: 1.6rem;
     }
-    .about-para2{
+
+    .about-para2 {
         display: none;
         padding-bottom: 10px;
     }
+
     .about p {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
     }
 
     /* Skills & Projects */
@@ -69,7 +75,8 @@
         /* single column */
         gap: 15px;
     }
-    .project-section p{
+
+    .project-section p {
         display: none;
     }
 
@@ -94,6 +101,12 @@
 
     .contact-me p {
         font-size: 0.9rem;
+    }
+
+    .contact-details {
+        margin: 0;
+        border-bottom: 2px solid #facc15;
+        border-radius: 45px;
     }
 
     /* Footer */

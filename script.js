@@ -1,3 +1,4 @@
+// background animation
 const rainBg = document.querySelector(".rain-bg");
 for (let i = 0; i < 30; i++) {
   const drop = document.createElement("div");
@@ -8,15 +9,14 @@ for (let i = 0; i < 30; i++) {
   rainBg.appendChild(drop);
 }
 
-
-
+//  skills image animation up down
   window.addEventListener("load", () => {
     const images = document.querySelectorAll(".skill-img img");
     
     images.forEach((img, index) => {
       setTimeout(() => {
         img.classList.add("animate");
-      }, index * 800); // delay each by 0.8s
+      }, index * 700);
     });
   });
 
