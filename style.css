@@ -442,8 +442,7 @@ section h2 {
 }
 
 .contact-details {
-  margin: 50px 400px 20px 400px;
-  border-bottom: 2px solid #facc15;
+  margin: 50px;
   border-radius: 45px;
   display: flex;
   flex-wrap: wrap;
