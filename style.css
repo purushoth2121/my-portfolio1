@@ -215,8 +215,49 @@ nav ul li a:hover {
   font-weight: 600;
   cursor: pointer;
   margin: 20px 10px 0 0;
-  transition: transform 0.3s, background 0.3s;
   display: inline-block;
+}
+.btn2{
+  
+  padding: 3px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  animation: Moveup 1.6s infinite linear;
+  animation-delay: 12s;
+  opacity: 0;
+  
+}
+@keyframes Moveup {
+  0%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  25%{
+    transform: translateY(-10px);
+    border:2px solid #007bff;
+    opacity: 1;
+
+  }
+  50%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  75%{
+    transform: translateY(10px);
+    border:5px solid red;
+    opacity: 1;
+
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  
 }
 
 .cont-btn a {
@@ -297,6 +338,7 @@ section h2 {
 }
 
 .toggle-buttons button {
+  font-size: 18px;
   padding: 10px 20px;
   margin: 0 10px;
   border: 2px solid #eab308;
@@ -429,7 +471,7 @@ section h2 {
 
 /* === CONTACT === */
 .contact-section {
-  margin: 50px;
+  margin: 20px;
   padding: 50px;
   text-align: center;
   
@@ -442,8 +484,6 @@ section h2 {
 }
 
 .contact-details {
-  margin: 50px;
-  border-radius: 45px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -456,17 +496,14 @@ section h2 {
   border-radius: 50%;
   margin-bottom: 10px;
   object-fit: cover;
-  border: 3px solid #facc15;
+  padding: 5px;
+  border: 2px solid #facc15;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .contact-me img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
-}
-
-.contact-me p {
-  font-weight: 500;
 }
 
 /* === FOOTER === */

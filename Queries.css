@@ -2,8 +2,8 @@
     .role{
         display: none;
     }
-    nav ul {
-        gap: 2px;
+    nav ul li{
+    justify-content: space-between;
     }
 
     /* Hero skills icons */
