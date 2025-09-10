@@ -1,3 +1,9 @@
+window.addEventListener("load", () =>{
+  setTimeout(() =>{
+    document.getElementById("preloader").style.display="none";
+  }, 2000)
+});
+
 // background animation
 const rainBg = document.querySelector(".rain-bg");
 for (let i = 0; i < 30; i++) {
@@ -16,7 +22,7 @@ for (let i = 0; i < 30; i++) {
     images.forEach((img, index) => {
       setTimeout(() => {
         img.classList.add("animate");
-      }, index * 700);
+      }, index * 800);
     });
   });
 
