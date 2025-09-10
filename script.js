@@ -5,7 +5,7 @@ for (let i = 0; i < 30; i++) {
   drop.classList.add("drop");
   drop.style.left = `${Math.random() * 100}%`;
   drop.style.animationDuration = `${Math.random() * 2 + 2}s`;
-  drop.style.animationDelay = `${Math.random() * 5}s`;
+  drop.style.animationDelay = `${Math.random() * 4}s`;
   rainBg.appendChild(drop);
 }
 
@@ -24,15 +24,19 @@ for (let i = 0; i < 30; i++) {
 
 const skillsBtn = document.getElementById("skillsBtn");
 const projectsBtn = document.getElementById("projectsBtn");
+const qualificationBtn = document.getElementById("qualificationBtn");
 const skillsSection = document.getElementById("skillsSection");
 const projectsSection = document.getElementById("projectsSection");
+const educationsection  = document.getElementById('educationsection');
 
 skillsBtn.addEventListener("click", () => {
   skillsSection.classList.add("active");
   projectsSection.classList.remove("active");
+  educationsection.classList.remove("active");
 
   skillsBtn.classList.add("active");
   projectsBtn.classList.remove("active");
+  qualificationBtn.classList.remove("active");
 
   // restart animation when user leaves projects
   projectsBtn.classList.remove("stop-animation");
@@ -41,12 +45,27 @@ skillsBtn.addEventListener("click", () => {
 projectsBtn.addEventListener("click", () => {
   projectsSection.classList.add("active");
   skillsSection.classList.remove("active");
+  educationsection.classList.remove("active");
 
   projectsBtn.classList.add("active");
   skillsBtn.classList.remove("active");
+  qualificationBtn.classList.remove("active");
 
   // stop animation once clicked
   projectsBtn.classList.add("stop-animation");
+});
+
+qualificationBtn.addEventListener("click", () => {
+  educationsection.classList.add("active");
+  skillsSection.classList.remove("active");
+  projectsSection.classList.remove("active");
+
+  qualificationBtn.classList.add("active");
+  skillsBtn.classList.remove("active");
+  projectsBtn.classList.remove("active");
+
+  qualificationBtn.classList.add("stop-animation");
+
 });
 
 function revealOnScroll() {
@@ -63,3 +82,8 @@ function revealOnScroll() {
 }
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+// contact button
+const contactBtn = document.getElementsByClassName("btn2");
+function btnclick(){
+  display="none";
+}

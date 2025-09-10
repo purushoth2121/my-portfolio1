@@ -1,9 +1,10 @@
 @media (max-width: 520px) {
-    .role{
+    .role {
         display: none;
     }
-    nav ul li{
-    justify-content: space-between;
+
+    nav ul li {
+        justify-content: space-between;
     }
 
     /* Hero skills icons */
@@ -87,6 +88,13 @@
     .project h3 {
         font-size: 1.1rem;
     }
+    #qualificationBtn{
+        display: none;
+    }
+    .Qualification{
+        display: none;
+    }
+
 
     /* Contact */
     .contact-section {
