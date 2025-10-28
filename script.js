@@ -1,95 +1,149 @@
-window.addEventListener("load", () =>{
-  setTimeout(() =>{
-    document.getElementById("preloader").style.display="none";
-  }, 2000)
+// Preloader
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.display = "none";
+    }
+  }, 2000);
 });
 
-// background animation
+// Background rain animation
 const rainBg = document.querySelector(".rain-bg");
-for (let i = 0; i < 30; i++) {
-  const drop = document.createElement("div");
-  drop.classList.add("drop");
-  drop.style.left = `${Math.random() * 100}%`;
-  drop.style.animationDuration = `${Math.random() * 2 + 2}s`;
-  drop.style.animationDelay = `${Math.random() * 4}s`;
-  rainBg.appendChild(drop);
+if (rainBg) {
+  for (let i = 0; i < 30; i++) {
+    const drop = document.createElement("div");
+    drop.classList.add("drop");
+    drop.style.left = `${Math.random() * 100}%`;
+    drop.style.animationDuration = `${Math.random() * 2 + 2}s`;
+    drop.style.animationDelay = `${Math.random() * 4}s`;
+    rainBg.appendChild(drop);
+  }
 }
 
-//  skills image animation up down
-  window.addEventListener("load", () => {
-    const images = document.querySelectorAll(".skill-img img");
-    
-    images.forEach((img, index) => {
-      setTimeout(() => {
-        img.classList.add("animate");
-      }, index * 800);
-    });
+// Skills image animation
+window.addEventListener("load", () => {
+  const images = document.querySelectorAll(".skill-img img");
+  images.forEach((img, index) => {
+    setTimeout(() => {
+      img.classList.add("animate");
+    }, index * 800);
+  });
+});
+
+
+
+// Section toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = {
+        skills: {
+            button: document.getElementById("skillsBtn"),
+            content: document.getElementById("skillsSection")
+        },
+        projects: {
+            button: document.getElementById("projectsBtn"),
+            content: document.getElementById("projectsSection")
+        },
+        qualification: {
+            button: document.getElementById("qualificationBtn"),
+            content: document.getElementById("educationsection")
+        }
+    };
+
+// Helper function to toggle sections
+function toggleSection(activeSection) {
+  // Deactivate all sections first
+  Object.values(sections).forEach(({ button, content }) => {
+    button?.classList.remove("active");
+    content?.classList.remove("active");
+    if (button === sections.projects.button) {
+      button.classList.remove("stop-animation");
+    }
   });
 
+  // Activate the selected section
+  const section = sections[activeSection];
+  if (section.button && section.content) {
+    section.button.classList.add("active");
+    section.content.classList.add("active");
+    
+    if (activeSection === "projects") {
+      section.button.classList.add("stop-animation");
+    }
+  }
+}
 
-
-const skillsBtn = document.getElementById("skillsBtn");
-const projectsBtn = document.getElementById("projectsBtn");
-const qualificationBtn = document.getElementById("qualificationBtn");
-const skillsSection = document.getElementById("skillsSection");
-const projectsSection = document.getElementById("projectsSection");
-const educationsection  = document.getElementById('educationsection');
-
-skillsBtn.addEventListener("click", () => {
-  skillsSection.classList.add("active");
-  projectsSection.classList.remove("active");
-  educationsection.classList.remove("active");
-
-  skillsBtn.classList.add("active");
-  projectsBtn.classList.remove("active");
-  qualificationBtn.classList.remove("active");
-
-  // restart animation when user leaves projects
-  projectsBtn.classList.remove("stop-animation");
+    // Add click event listeners
+    if (sections.skills.button) {
+        sections.skills.button.addEventListener("click", () => toggleSection("skills"));
+    }
+    if (sections.projects.button) {
+        sections.projects.button.addEventListener("click", () => toggleSection("projects"));
+    }
+    if (sections.qualification.button) {
+        sections.qualification.button.addEventListener("click", () => toggleSection("qualification"));
+    }
+    
+    // Show skills section by default
+    toggleSection("skills");
 });
 
-projectsBtn.addEventListener("click", () => {
-  projectsSection.classList.add("active");
-  skillsSection.classList.remove("active");
-  educationsection.classList.remove("active");
-
-  projectsBtn.classList.add("active");
-  skillsBtn.classList.remove("active");
-  qualificationBtn.classList.remove("active");
-
-  // stop animation once clicked
-  projectsBtn.classList.add("stop-animation");
-});
-
-qualificationBtn.addEventListener("click", () => {
-  educationsection.classList.add("active");
-  skillsSection.classList.remove("active");
-  projectsSection.classList.remove("active");
-
-  qualificationBtn.classList.add("active");
-  skillsBtn.classList.remove("active");
-  projectsBtn.classList.remove("active");
-
-  qualificationBtn.classList.add("stop-animation");
-
-});
-
+// Scroll reveal animation
 function revealOnScroll() {
   const sections = document.querySelectorAll("section");
   const triggerBottom = window.innerHeight * 0.85;
-  sections.forEach((sec) => {
-    const boxTop = sec.getBoundingClientRect().top;
+
+  sections.forEach((section) => {
+    const boxTop = section.getBoundingClientRect().top;
     if (boxTop < triggerBottom) {
-      sec.classList.add("reveal");
+      section.classList.add("reveal");
     } else {
-      sec.classList.remove("reveal");
+      section.classList.remove("reveal");
     }
   });
 }
+
+// Add scroll and load event listeners
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
-// contact button
-const contactBtn = document.getElementsByClassName("btn2");
-function btnclick(){
-  display="none";
-}
+window.addEventListener("DOMContentLoaded", () => {
+  toggleSection("skills");
+});
+
+// Email sending functionality
+// function sendMessage() {
+//   const message = document.getElementById("userMessage").value;
+//   if (!message.trim()) {
+//     alert("Please enter a message!");
+//     return;
+//   }
+
+//   // Show loading state
+//   const sendBtn = document.getElementById("sendBtn");
+//   const originalText = sendBtn.innerText;
+//   sendBtn.innerText = "Sending...";
+//   sendBtn.disabled = true;
+
+//   emailjs.send("service_m04gvpa", "template_cyauo77", {
+//     to_name: "Purushothaman",
+//     from_name: "Portfolio Visitor",
+//     message: message,
+//     reply_to: "purushothncr2002@gmail.com"
+//   })
+//   .then(function(response) {
+//     alert("Message sent successfully!");
+//     document.getElementById("userMessage").value = "";
+//   })
+//   .catch(function(error) {
+//     console.error("Error:", error);
+//     alert("Failed to send message. Please try again!");
+//   })
+//   .finally(function() {
+//     // Reset button state
+//     sendBtn.innerText = originalText;
+//     sendBtn.disabled = false;
+//   });
+// }
+
+// // Add event listener for send button
+// document.getElementById("sendBtn").addEventListener("click", sendMessage);

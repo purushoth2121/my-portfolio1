@@ -13,16 +13,16 @@
         padding: 10px;
     }
 
-    .skill-img img {
+    .skill-img a img {
         width: 10px;
         margin: 0;
         padding: 0;
     }
 
 
-    #hero.skill-img img {
+    #hero.skill-img a img {
         width: 50px;
-        height: auto;
+        height: 50px;
         border-radius: 12px;
     }
 
@@ -113,7 +113,6 @@
 
     .contact-details {
         margin: 0;
-        border-bottom: 2px solid #facc15;
         border-radius: 45px;
     }
 

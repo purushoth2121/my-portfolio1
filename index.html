@@ -19,6 +19,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
+
+    <!-- EmailJS -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("RC4zx7afC5IORxaew");
+        })();
+    </script> -->
 </head>
 
 <body>
@@ -45,37 +53,42 @@
 
     <!-- Hero Section (Skills Images) -->
     <section id="hero" class="skill-img" data-aos="fade-right">
-        <img src="img/html img.png" alt="HTML" />
-        <img src="img/css img.png" alt="CSS" />
-        <img src="img/tailwind1.png" alt="Tailwind CSS" />
-        <img src="img/js img 2.png" alt="JavaScript" />
-        <img src="img/jquery img.png" alt="jQuery" />
-        <img src="img/tsc1.png" alt="TypeScript" />
-        <img src="img/raect img2.png" alt="React.js" />
-        <img src="img/wordpress1.webp" alt="WordPress" />
-        <img src="img/node.png" alt="Node.js" />
-        <img src="img/git img.png" alt="Git and GitHub" />
+        <a href="#skill-img"><img src="img/html img.png" alt="HTML" /></a>
+        <a href="#skill-img"><img src="img/css img.png" alt="CSS" /></a>
+        <a href="#skill-img"><img src="img/tailwind1.png" alt="Tailwind CSS" /></a>
+        <a href="#skill-img"><img src="img/js img 2.png" alt="JavaScript" /></a>
+        <a href="#skill-img"><img src="img/jquery img.png" alt="jQuery" /></a>
+        <a href="#skill-img"><img src="img/tsc1.png" alt="TypeScript" /></a>
+        <a href="#skill-img"><img src="img/raect img2.png" alt="React.js" /></a>
+        <a href="#skill-img"><img src="img/wordpress1.webp" alt="WordPress" /></a>
+        <a href="#skill-img"><img src="img/node.png" alt="Node.js" /></a>
+        <a href="#skill-img"><img src="img/git img.png" alt="Git and GitHub" /></a>
     </section>
 
     <!-- Profile & about -->
     <section id="about-profile" class="grid two-col">
-        <!-- profile -->
+        <!-- Profile -->
         <div class="card profile" data-aos="fade-right">
-            <img src="img/photo.png" alt="Profile photo" class="myphoto" />
-
+            <img src="img/photo.png" alt="Purushothaman's Profile Photo" class="myphoto" />
             <h1 class="name1">I'm <span class="name">Purushothaman</span></h1>
-            <p>React | Full-stack <br>
-                Building Modern web Applications</p>
-
-            <button class="cont-btn">
-                <a href="./img/Frontend resume.pdf">My Resume <i class="fa-solid fa-download"></i></a>
+            <p>React | Full-stack Developer<br>
+                Building Modern Web Applications</p>
+            <button class="cont-btn" id="resumeBtn">
+                <a href="./img/Frontend resume.pdf" title="Download Resume">
+                    My Resume <i class="fa-solid fa-download" aria-hidden="true"></i>
+                </a>
             </button>
             <div class="social-contact">
-                <a href="https://www.linkedin.com/in/purushoth2121/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/purushoth_0123"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/purushoth2121"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/purushoth2121/" title="LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/purushoth_0123" title="Instagram Profile">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/purushoth2121" title="GitHub Profile">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
             </div>
-
         </div>
         <!-- About Section -->
         <div class="card about" id="about">
@@ -86,14 +99,13 @@
                 <b>React.js</b>,<b>Express.js</b> and building responsive and user-friendly web applications.
             </p>
             <p class="about-para2">
-                My goal is to grow beyond a <b>Full Stack Developer</b> — building scalable applications, exploring
-                <b>cloud technologies</b>, and contributing to innovative solutions that create real impact.
-            </p>
+                My goal is to evolve into a Senior Software Engineer — leading end-to-end development of scalable
+                applications, integrating advanced cloud and DevOps solutions.</p>
         </div>
     </section>
     <!-- skills and project section -->
     <section id="skills-Project">
-        <div class="toggle-buttons">
+        <div class="toggle-buttons" id="skill-img">
             <button id="skillsBtn" class="active">Skills</button>
             <button id="projectsBtn">Projects</button>
             <button id="qualificationBtn">Qualification</button>
@@ -103,33 +115,76 @@
             <!-- Skills Section -->
             <div id="skillsSection" class="section active">
                 <div class="skills-text" id="skills">
-                    <div class="my-skill">
+                    <ul class="my-skill">
                         <h3>Frontend</h3>
-                        <p>HTML5</p>
-                        <p>CSS3</p>
-                        <p>JavaScript (ES6+)</p>
-                        <p>jQuery</p>
-                        <p>WordPress</p>
-                    </div>
+                        <li>
+                            <p>◆</p>
+                            <p>HTML5</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> CSS3</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p>JavaScript<b>(ES6)</b></p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> jQuery</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> WordPress</p>
+                        </li>
+                    </ul>
 
-                    <div class="my-skill">
-                        <h3>Frameworks &<br> Libraries</h3>
-                        <p>React.js</p>
-                        <p>TypeScript</p>
-                        <p>Router, Redux, <br>API context</p>
-                    </div>
-                    <div class="my-skill">
+                    <ul class="my-skill">
+                        <h3>Frameworks <br>& Libraries</h3>
+                        <li>
+                            <p>◆</p>
+                            <p> React.js</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> TypeScript</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> Router, Redux, <br>API context</p>
+                        </li>
+                    </ul>
+                    <ul class="my-skill">
                         <h3>Backend</h3>
-                        <p>Node.js</p>
-                        <p>Express.js (basic)</p>
-                    </div>
+                        <li>
+                            <p>◆</p>
+                            <p> Node.js</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> Express.js</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> REST API, MWC</p>
+                        </li>
+                    </ul>
 
-                    <div class="my-skill">
+                    <ul class="my-skill">
                         <h3>Dev & Tools</h3>
-                        <p>Git</p>
-                        <p>GitHub</p>
-                        <p>Salesforce</p>
-                    </div>
+                        <li>
+                            <p>◆</p>
+                            <p> Git</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p>GitHub</p>
+                        </li>
+                        <li>
+                            <p>◆</p>
+                            <p> Salesforce</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -222,27 +277,34 @@
     <!-- Contact section -->
     <section class="contact-section" id="contact">
         <h1>Contact</h1>
-        <div class="contact-details">
-            <div class="contact-me">
-                <a href="https://github.com/purushoth2121">
-                    <img src="./img/git img.png" alt="github">
-                </a>
+        <div class="contact-container">
+            <div class="contact-details">
+                <div class="contact-me">
+                    <a href="https://github.com/purushoth2121" title="GitHub Profile">
+                        <img src="./img/git img.png" alt="GitHub">
+                    </a>
+                </div>
+                <div class="contact-me">
+                    <a href="https://www.linkedin.com/in/purushoth2121/" title="LinkedIn Profile">
+                        <img src="./img/linkedin.webp" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="contact-me">
+                    <a href="mailto:purushothncr2002@gmail.com" title="Send Email">
+                        <img src="./img/gmail1.jpg" alt="Email">
+                    </a>
+                </div>
+                <div class="contact-me">
+                    <a href="tel:+919361137694" title="Call Me">
+                        <img src="./img/phone2.jpg" alt="Phone">
+                    </a>
+                </div>
             </div>
-            <div class="contact-me">
-                <a href="https://www.linkedin.com/in/purushoth2121/">
-                    <img src="./img/linkedin.webp" alt="linkedin">
-                </a>
-            </div>
-            <div class="contact-me">
-                <a href="mailto:purushothncr2002@gmail.com">
-                    <img src="./img/gmail1.jpg" alt="gmail">
-                </a>
-            </div>
-            <div class="contact-me">
-                <a href="tel:+919361137694">
-                    <img src="./img/phone2.jpg" alt="Phone">
-                </a>
-            </div>
+            <!-- <div class="message-input">
+                <input type="text" id="userMessage" placeholder="Your Message" />
+                <button type="button" id="sendBtn">Send</button>
+            </div> -->
+
         </div>
     </section>
 

@@ -15,9 +15,11 @@
   font-size: 1.2rem;
   color: #eab308;
 }
-#preloader h4{
+
+#preloader h4 {
   color: white;
 }
+
 .loader {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #38bdf8;
@@ -26,9 +28,15 @@
   height: 50px;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* === RESET & GLOBAL === */
@@ -38,6 +46,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   height: 100vh;
   background: hsl(222, 47%, 11%);
@@ -72,6 +81,7 @@ body {
     transform: translateY(100vh);
     opacity: 0;
   }
+
   100% {
     transform: translateY(-10px);
     opacity: 0.8;
@@ -123,9 +133,9 @@ nav ul li a:hover {
   background: #0f172a;
 }
 
-.skill-img img {
+.skill-img a img {
   width: 75px;
-  height: auto;
+  height: 75px;
   opacity: 0;
   transform: translateY(50px);
   object-fit: cover;
@@ -149,14 +159,17 @@ nav ul li a:hover {
     transform: translateY(50px);
     opacity: 0;
   }
+
   30% {
     transform: translateY(-30px);
     opacity: 1;
   }
+
   60% {
     transform: translateY(0);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -201,23 +214,30 @@ nav ul li a:hover {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 4px solid #facc15;
+  border: 2px solid;
   object-fit: cover;
-  margin: 0 auto 20px;
+  margin: 10px auto 20px;
+  padding: 5px;
   animation: moveDown 1.4s ease forwards;
   animation-delay: 11s;
 }
 
+.myphoto:hover {
+  transform: scale(0.95);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
 @keyframes moveDown {
-  from{
+  from {
     transform: translateY(-150px);
     opacity: 0;
   }
-  to{
+
+  to {
     transform: translateY(0);
     opacity: 1;
   }
-  
+
 }
 
 .name1 {
@@ -236,6 +256,7 @@ nav ul li a:hover {
   opacity: 0.85;
   text-align: center;
 }
+
 .cont-btn {
   background: #facc15;
   color: #0f172a;
@@ -248,6 +269,36 @@ nav ul li a:hover {
   margin: 20px 10px 0 0;
   display: inline-block;
 }
+
+/* Resume button animation */
+#resumeBtn {
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .cont-btn a {
   color: inherit;
   text-decoration: none;
@@ -302,13 +353,15 @@ section h2 {
 
 #skills-Project {
   text-align: center;
-  margin: 20px 50px 0 50px; /* Remove bottom margin */
-  padding: 30px 30px 0 30px; /* Remove bottom padding */
+  margin: 20px 50px 0;
+  padding: 30px 30px 0;
   border-radius: 15px;
   animation: slideInLeft 1s ease-out forwards;
 }
+
 section {
-  padding: 60px 20px 30px 20px; /* Reduce bottom padding */
+  padding: 60px 20px 30px 20px;
+  /* Reduce bottom padding */
 }
 
 .section {
@@ -359,18 +412,22 @@ section {
     transform: translateY(0);
     opacity: 1;
   }
+
   25% {
     transform: translateY(-10px);
-    opacity: 0.8;
+    opacity: 1.0;
   }
+
   50% {
-    transform: translateY(10px);
-    opacity: 0.8;
+    transform: translateY(8px);
+    opacity: 1.1;
   }
+
   75% {
     transform: translateY(-10px);
-    opacity: 0.9;
+    opacity: 1.2;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -398,12 +455,19 @@ section {
   border-top: 2px solid #eab308;
   border-bottom: 2px solid #eab308;
   border-radius: 20px;
-  padding: 25px;
+  padding: 15px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   transition: border 0.3s;
+  list-style: none;
+}
+.my-skill li {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 
 .my-skill:hover {
@@ -460,36 +524,42 @@ section {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
 }
+
 /* Qualification section */
 #educationsection {
   animation: slideInLeft 1s ease-out forwards;
 }
-.Qualification{
+
+.Qualification {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.Education{
+
+.Education {
   background: #1e293b;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   text-align: start;
   gap: 25px;
-  margin: 10px;
-  padding: 20px 20px 0px 20px;
-  margin-bottom: 0;
+  margin: 10px 10px 0;
+  padding: 20px;
   border: 2px solid #eab308;
 }
-.Education:hover{
-    transform: translateY(-5px) scale(1.02);
+
+.Education:hover {
+  transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
 }
-.Education h3, .Education h4 {
+
+.Education h3,
+.Education h4 {
   font-size: 1.2rem;
   color: #facc15;
   font-weight: bold;
 }
+
 .Education img {
   width: 100%;
   height: 180px;
@@ -497,6 +567,7 @@ section {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
 .Education ul {
   list-style: none;
 }
@@ -504,12 +575,19 @@ section {
 /* === CONTACT === */
 .contact-section {
   padding: 50px;
-  text-align: center; 
+  text-align: center;
+  
 }
-
 .contact-section h1 {
   font-size: 2.3rem;
   margin-bottom: 20px;
+}
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .contact-details {
@@ -534,6 +612,42 @@ section {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
 }
+.message-input{
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.message-input input{
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.message-input input:focus,
+.message-input textarea:focus {
+  outline: none;
+  border: 2px solid #38bdf8;
+}
+.message-input button{
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+} 
+.message-input button:hover{
+  background-color: #0ea5e9;
+}
+
 
 /* === FOOTER === */
 footer {
