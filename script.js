@@ -86,6 +86,15 @@ function toggleSection(activeSection) {
     
     // Show skills section by default
     toggleSection("skills");
+
+    // Skill group toggle functionality
+    const skillToggles = document.querySelectorAll('.skill-toggle');
+    skillToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    });
 });
 
 // Scroll reveal animation
@@ -109,41 +118,10 @@ window.addEventListener("load", revealOnScroll);
 window.addEventListener("DOMContentLoaded", () => {
   toggleSection("skills");
 });
-
-// Email sending functionality
-// function sendMessage() {
-//   const message = document.getElementById("userMessage").value;
-//   if (!message.trim()) {
-//     alert("Please enter a message!");
-//     return;
-//   }
-
-//   // Show loading state
-//   const sendBtn = document.getElementById("sendBtn");
-//   const originalText = sendBtn.innerText;
-//   sendBtn.innerText = "Sending...";
-//   sendBtn.disabled = true;
-
-//   emailjs.send("service_m04gvpa", "template_cyauo77", {
-//     to_name: "Purushothaman",
-//     from_name: "Portfolio Visitor",
-//     message: message,
-//     reply_to: "purushothncr2002@gmail.com"
-//   })
-//   .then(function(response) {
-//     alert("Message sent successfully!");
-//     document.getElementById("userMessage").value = "";
-//   })
-//   .catch(function(error) {
-//     console.error("Error:", error);
-//     alert("Failed to send message. Please try again!");
-//   })
-//   .finally(function() {
-//     // Reset button state
-//     sendBtn.innerText = originalText;
-//     sendBtn.disabled = false;
-//   });
-// }
-
-// // Add event listener for send button
-// document.getElementById("sendBtn").addEventListener("click", sendMessage);
+// Skill list toggle
+  document.querySelectorAll(".skill-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const skillList = button.nextElementSibling;
+      skillList.classList.toggle("active");
+    });
+  });

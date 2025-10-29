@@ -212,7 +212,6 @@ nav ul li a:hover {
   color: #0078ff;
   white-space: nowrap;
   overflow: hidden;
-  border-right: none;
   animation: typingLoop 5s steps(5) infinite;
   animation-delay: 14s;
 }
@@ -395,52 +394,162 @@ section h2 {
 }
 
 /* === SKILLS & PROJECT TOGGLE === */
-
 #skills-Project {
   text-align: center;
-  margin: 20px 50px 0;
-  padding: 30px 30px 0;
-  border-radius: 15px;
+  margin: 20px auto 0;
+  max-width: 1200px;
+  padding: 20px 30px 0;
   animation: slideInLeft 1s ease-out forwards;
 }
 
-section {
-  padding: 60px 20px 30px 20px;
-  /* Reduce bottom padding */
+/* Section Toggle Controls */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
+.toggle-buttons button {
+  font-size: 15px;
+  padding: 10px 24px;
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: #38bdf8;
+  cursor: pointer;
+    border-top-left-radius: 10px;
+
+  transition: all 0.2s ease-out;
+  letter-spacing: 0.5px;
+}
+
+.toggle-buttons button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.toggle-buttons button:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.toggle-buttons button:hover {
+  border-color: #facc15;
+  color: #facc15;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.toggle-buttons button.active {
+  background: #38bdf8;
+  color: #0f172a;
+  border-color: #38bdf8;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/* Section Content */
 .section {
   display: none;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  pointer-events: none;
 }
 
 .section.active {
   display: block;
   opacity: 1;
   transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
 }
 
-.toggle-buttons {
-  text-align: center;
-  margin-bottom: 20px;
+/* Skill Groups */
+.skill-group {
+  margin: 20px;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
-.toggle-buttons button {
-  font-size: 18px;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: 2px solid #eab308;
-  background: #444;
-  color: #fff;
+.skill-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: #1e293b;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  color: #facc15;
+  font-size: 1.2rem;
+  font-weight: 700;
   cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.3s;
+  width: 100%;
+  padding: 12px 20px;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.toggle-buttons button.active {
-  background: #007bff;
+.skill-toggle:hover {
+  background: #2d3b4f;
+  border-color: #facc15;
+  transform: translateX(5px);
+}
+
+.skill-toggle::after {
+  content: '\25B6';
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s ease;
+  color: #38bdf8;
+}
+
+.skill-toggle[aria-expanded="true"]::after {
+  transform: rotate(90deg);
+}
+
+/* Skill Lists */
+.my-skill {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.skill-toggle[aria-expanded="true"] + .my-skill {
+  opacity: 1;
+  max-height: 500px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.my-skill li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.my-skill li:hover {
+  transform: translateX(5px);
+  color: #facc15;
+}
+
+.my-skill h3 {
+  color: #facc15;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #38bdf8;
 }
 
 #projectsBtn {
@@ -457,22 +566,18 @@ section {
     transform: translateY(0);
     opacity: 1;
   }
-
   25% {
     transform: translateY(-10px);
     opacity: 1.0;
   }
-
   50% {
     transform: translateY(8px);
     opacity: 1.1;
   }
-
   75% {
     transform: translateY(-10px);
     opacity: 1.2;
   }
-
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -482,49 +587,6 @@ section {
 #projectsBtn:hover {
   border: #007bff;
   color: yellow;
-}
-
-/* === SKILLS BOXES === */
-.skills-text {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 10px;
-  text-align: left;
-  list-style: none;
-  padding: 10px;
-}
-
-.my-skill {
-  background: #1e293b;
-  min-height: 250px;
-  border-top: 2px solid #eab308;
-  border-bottom: 2px solid #eab308;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  transition: border 0.3s;
-  list-style: none;
-}
-
-.my-skill li {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-
-.my-skill:hover {
-  border: 2px solid green;
-  transform: scale(1.2);
-}
-
-.my-skill h3 {
-  color: #facc15;
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 /* === PROJECTS === */
@@ -571,7 +633,7 @@ section {
   box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
 }
 
-/* Qualification section */
+/* === QUALIFICATION === */
 #educationsection {
   animation: slideInLeft 1s ease-out forwards;
 }
@@ -580,42 +642,68 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .Education {
   background: #1e293b;
-  border-radius: 20px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   text-align: start;
-  gap: 25px;
-  margin: 10px 10px 0;
-  padding: 20px;
-  border: 2px solid #eab308;
+  gap: 15px;
+  margin: 8px;
+  padding: 15px;
+  border: 1px solid #38bdf8;
+  width: 280px;
 }
 
 .Education:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(250, 204, 21, 0.3);
+  transform: translateY(-3px);
+  border-color: #facc15;
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
 }
 
 .Education h3,
 .Education h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #facc15;
-  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: -5px;
 }
 
 .Education img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .Education ul {
   list-style: none;
+}
+
+.cert-link {
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.cert-link .cont-btn {
+  width: 100%;
+  margin: 10px 0 0;
+  background: #38bdf8;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.cert-link .cont-btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
 }
 
 /* === CONTACT === */

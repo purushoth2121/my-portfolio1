@@ -1,4 +1,4 @@
-@media (max-width: 520px) {
+@media (max-width: 768px) {
     .role {
         display: none;
     }
@@ -26,6 +26,21 @@
         border-radius: 12px;
     }
 
+    .skill-toggle {
+        display: block;
+        align-items: flex-start;
+    }
+
+    .my-skill {
+        display: none;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .my-skill.active {
+        display: block;
+    }
+
     /* About section */
     #about-profile {
 
@@ -50,7 +65,8 @@
     .about p {
         font-size: 1.1rem;
     }
-    .about_title{
+
+    .about_title {
         font-size: 14px;
     }
 
@@ -66,10 +82,8 @@
     }
 
     .my-skill {
-        min-height: 50px;
         display: block;
-        padding: 15px;
-        margin: 5px 0;
+       
     }
 
     /* Projects */
@@ -91,10 +105,12 @@
     .project h3 {
         font-size: 1.1rem;
     }
-    #qualificationBtn{
+
+    #qualificationBtn {
         display: none;
     }
-    .Qualification{
+
+    .Qualification {
         display: none;
     }
 
@@ -123,5 +139,8 @@
     footer {
         font-size: 0.8rem;
         padding: 10px;
+
     }
+
+
 }
