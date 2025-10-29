@@ -253,7 +253,7 @@ nav ul li a:hover {
 }
 
 .myphoto {
-  opacity: 1;
+  opacity: 0;
   display: block;
   width: 250px;
   height: 250px;
