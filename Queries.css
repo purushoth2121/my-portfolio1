@@ -50,6 +50,9 @@
     .about p {
         font-size: 1.1rem;
     }
+    .about_title{
+        font-size: 14px;
+    }
 
     /* Skills & Projects */
     #skills-Project {
