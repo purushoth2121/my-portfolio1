@@ -186,6 +186,7 @@ nav ul li a:hover {
 .about {
   background: #1e293b;
   border-radius: 20px;
+  border: 1px solid #38bdf8;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -255,12 +256,11 @@ nav ul li a:hover {
   opacity: 0;
   display: block;
   width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px solid;
-  object-fit: cover;
-  margin: 10px auto 20px;
+  height: 300px;
   padding: 5px;
+  border-radius: 10%;
+  object-fit:cover;
+  margin: 10px auto 20px;
   animation: moveDown 1.4s ease forwards;
   animation-delay: 11s;
 }

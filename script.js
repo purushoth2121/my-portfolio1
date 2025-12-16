@@ -73,7 +73,6 @@ function toggleSection(activeSection) {
   }
 }
 
-    // Add click event listeners
     if (sections.skills.button) {
         sections.skills.button.addEventListener("click", () => toggleSection("skills"));
     }
@@ -115,13 +114,6 @@ function revealOnScroll() {
 // Add scroll and load event listeners
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
-window.addEventListener("DOMContentLoaded", () => {
-  toggleSection("skills");
-});
-// Skill list toggle
-  document.querySelectorAll(".skill-toggle").forEach(button => {
-    button.addEventListener("click", () => {
-      const skillList = button.nextElementSibling;
-      skillList.classList.toggle("active");
-    });
-  });
+// Note: `toggleSection` is defined inside the main DOMContentLoaded handler above,
+// so we must not call it here (that caused the ReferenceError). The initial
+// activation of the skills section is already performed earlier.
